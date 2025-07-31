@@ -192,4 +192,4 @@ Para soporte técnico o modificaciones:
 
 ---
 
-*Desarrollado con ❤️ para ASIREP*
+*Desarrollado con ❤️ para ASIREP*# asirep

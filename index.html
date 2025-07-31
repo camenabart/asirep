@@ -31,31 +31,43 @@
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#inicio" class="nav-link">
+                        <a href="index.html" class="nav-link">
                             <i class="fas fa-home"></i>
-                            <span>Inicio</span>
+                            <span>ASIREP</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#servicios" class="nav-link">
-                            <i class="fas fa-cogs"></i>
-                            <span>Servicios</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#rubros" class="nav-link">
+                        <a href="rubros.html" class="nav-link">
                             <i class="fas fa-industry"></i>
                             <span>Rubros</span>
                         </a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a href="marcas.html" class="nav-link">
+                            <i class="fas fa-star"></i>
+                            <span>Nuestras Marcas</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="marcas.html#bard">Bard</a></li>
+                            <li><a href="marcas.html#dataaire">Data Aire</a></li>
+                            <li><a href="marcas.html#bomaksan">Bomaksan</a></li>
+                            <li><a href="marcas.html#sendo">Sendo</a></li>
+                            <li><a href="marcas.html#boaair">BoaAir</a></li>
+                            <li><a href="marcas.html#tuttle">Tuttle & Bailey</a></li>
+                            <li><a href="marcas.html#united">United Enertech</a></li>
+                            <li><a href="marcas.html#huayi">Huayi</a></li>
+                            <li><a href="marcas.html#bion">Bion</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
-                        <a href="#marcas" class="nav-link">
-                            <i class="fas fa-handshake"></i>
-                            <span>Marcas</span>
+                        <a href="biblioteca.html" class="nav-link">
+                            <i class="fas fa-book"></i>
+                            <span>Biblioteca</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contacto" class="nav-link nav-cta">
+                        <a href="contacto.html" class="nav-link nav-cta">
                             <i class="fas fa-envelope"></i>
                             <span>Contacto</span>
                         </a>
@@ -220,82 +232,115 @@
     </section>
 
     <!-- Solutions Section -->
-    <section class="solutions">
+    <section id="soluciones" class="solutions">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title gradient-text">Nuestras Soluciones</h2>
                 <p class="section-subtitle">Tecnología de vanguardia para cada necesidad</p>
             </div>
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-image" style="background-image: url('img/Asirep_header_files/server-1235959_1920.jpg'); background-size: cover; background-position: center;">
-                        <div class="solution-overlay">
-                            <i class="fas fa-temperature-low"></i>
-                        </div>
+            
+            <!-- Solución 1: Imagen izquierda, texto derecha -->
+            <div class="solution-row">
+                <div class="solution-content-side">
+                    <div class="solution-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
-                    <div class="solution-content">
-                        <span class="solution-category">CLIMATIZACIÓN DE PRECISIÓN</span>
-                        <h3 class="solution-title">INSTALACIONES CRÍTICAS</h3>
-                        <p class="solution-description">
-                            Asegura la continuidad operacional de Data Centers, salas críticas y todos los recintos que requieran control de temperatura y humedad.
-                        </p>
-                    </div>
+                    <span class="solution-category">CLIMATIZACIÓN DE PRECISIÓN</span>
+                    <h3 class="solution-title">INSTALACIONES CRÍTICAS</h3>
+                    <p class="solution-description">
+                        Asegura la continuidad operacional de Data Centers, salas críticas y todos los recintos que requieran control de temperatura y humedad.
+                    </p>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-image" style="background-image: url('img/Asirep_header_files/Asirep-SolucionesAsset-5.jpg'); background-size: cover; background-position: center;">
-                        <div class="solution-overlay">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                    </div>
-                    <div class="solution-content">
-                        <span class="solution-category">SALAS MODULARES</span>
-                        <h3 class="solution-title">EQUIPOS DE MONTAJE DE PARED EXTERIOR</h3>
-                        <p class="solution-description">
-                            Cuando no se dispone de espacio al interior de una sala y requieres equipos de trabajo pesado (heavy duty), te ofrecemos equipos de clase mundial.
-                        </p>
-                    </div>
+                <div class="solution-image-side">
+                    <img src="img/Asirep_header_files/server-1235959_1920.jpg" alt="Instalaciones Críticas" class="solution-img">
                 </div>
-                <div class="solution-card">
-                    <div class="solution-image" style="background-image: url('img/Asirep_header_files/Asirep-SolucionesAsset-6.jpg'); background-size: cover; background-position: center;">
-                        <div class="solution-overlay">
-                            <i class="fas fa-wind"></i>
-                        </div>
+            </div>
+
+            <!-- Solución 2: Texto izquierda, imagen derecha -->
+            <div class="solution-row reverse">
+                <div class="solution-content-side">
+                    <div class="solution-dots">
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
-                    <div class="solution-content">
-                        <span class="solution-category">PRESURIZACIÓN</span>
-                        <h3 class="solution-title">PRODUCCIÓN SUSTENTABLE</h3>
-                        <p class="solution-description">
-                            Desarrollamos soluciones de presurización: Wall mount jet pulse, Piso jet pulse, Equipos especiales para grandes capacidades.
-                        </p>
-                    </div>
+                    <span class="solution-category">SALAS MODULARES</span>
+                    <h3 class="solution-title">EQUIPOS DE MONTAJE DE PARED EXTERIOR</h3>
+                    <p class="solution-description">
+                        Cuando no se dispone de espacio al interior de una sala y requieres equipos de trabajo pesado (heavy duty), te ofrecemos equipos de clase mundial.
+                    </p>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-image" style="background-image: url('img/Asirep_header_files/Asirep-SolucionesAsset-7.jpg'); background-size: cover; background-position: center;">
-                        <div class="solution-overlay">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                    </div>
-                    <div class="solution-content">
-                        <span class="solution-category">SERVICIO DE AIRE LIMPIO</span>
-                        <h3 class="solution-title">LIMPIEZA DE GASES CORROSIVOS</h3>
-                        <p class="solution-description">
-                            Diseñamos la ingeniería, los equipos y el montaje, para posteriormente ocuparnos del mantenimiento del equipo y control de la media química.
-                        </p>
-                    </div>
+                <div class="solution-image-side">
+                    <img src="img/Asirep_header_files/Asirep-SolucionesAsset-5.jpg" alt="Salas Modulares" class="solution-img">
                 </div>
-                <div class="solution-card">
-                    <div class="solution-image" style="background-image: url('img/Asirep_header_files/Asirep-SolucionesAsset-8.jpg'); background-size: cover; background-position: center;">
-                        <div class="solution-overlay">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
+            </div>
+
+            <!-- Solución 3: Imagen izquierda, texto derecha -->
+            <div class="solution-row">
+                <div class="solution-content-side">
+                    <div class="solution-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
-                    <div class="solution-content">
-                        <span class="solution-category">PROYECTOS EPC</span>
-                        <h3 class="solution-title">SOLUCIONES INTEGRALES</h3>
-                        <p class="solution-description">
-                            Nuestra experiencia nos permite desarrollar grandes proyectos de Ingeniería, suministro, construcción y puesta en marcha.
-                        </p>
+                    <span class="solution-category">PRESURIZACIÓN</span>
+                    <h3 class="solution-title">PRODUCCIÓN SUSTENTABLE</h3>
+                    <p class="solution-description">
+                        Desarrollamos soluciones de presurización: Wall mount jet pulse, Piso jet pulse, Equipos especiales para grandes capacidades.
+                    </p>
+                </div>
+                <div class="solution-image-side">
+                    <img src="img/Asirep_header_files/Asirep-SolucionesAsset-6.jpg" alt="Presurización" class="solution-img">
+                </div>
+            </div>
+
+            <!-- Solución 4: Texto izquierda, imagen derecha -->
+            <div class="solution-row reverse">
+                <div class="solution-content-side">
+                    <div class="solution-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
                     </div>
+                    <span class="solution-category">SERVICIO DE AIRE LIMPIO</span>
+                    <h3 class="solution-title">LIMPIEZA DE GASES CORROSIVOS</h3>
+                    <p class="solution-description">
+                        Diseñamos la ingeniería, los equipos y el montaje, para posteriormente ocuparnos del mantenimiento del equipo y control de la media química.
+                    </p>
+                </div>
+                <div class="solution-image-side">
+                    <img src="img/Asirep_header_files/Asirep-SolucionesAsset-7.jpg" alt="Aire Limpio" class="solution-img">
+                </div>
+            </div>
+
+            <!-- Solución 5: Imagen izquierda, texto derecha -->
+            <div class="solution-row">
+                <div class="solution-content-side">
+                    <div class="solution-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                    </div>
+                    <span class="solution-category">PROYECTOS EPC</span>
+                    <h3 class="solution-title">SOLUCIONES INTEGRALES</h3>
+                    <p class="solution-description">
+                        Nuestra experiencia nos permite desarrollar grandes proyectos de Ingeniería, suministro, construcción y puesta en marcha.
+                    </p>
+                </div>
+                <div class="solution-image-side">
+                    <img src="img/Asirep_header_files/Asirep-SolucionesAsset-8.jpg" alt="Proyectos EPC" class="solution-img">
                 </div>
             </div>
         </div>
@@ -315,7 +360,7 @@
                     <!-- Fila Superior -->
                     <div class="hex-item hex-brand" data-brand="bard">
                         <div class="hex-content">
-                            <div class="brand-logo">Bard</div>
+                            <img src="img/bard.png" alt="Bard" class="brand-logo-img">
                         </div>
                     </div>
                     <div class="hex-item hex-brand" data-brand="dataaire">
@@ -327,7 +372,7 @@
                     <!-- Fila Medio Superior -->
                     <div class="hex-item hex-brand" data-brand="boa">
                         <div class="hex-content">
-                            <div class="brand-logo">BOA AIR</div>
+                            <img src="img/boaair.png" alt="BOA Air" class="brand-logo-img">
                         </div>
                     </div>
                     <div class="hex-item hex-center">
@@ -337,28 +382,26 @@
                     </div>
                     <div class="hex-item hex-brand" data-brand="bomakean">
                         <div class="hex-content">
-                            <div class="brand-logo">bomakean</div>
+                            <img src="img/bomaksan.png" alt="Bomaksan" class="brand-logo-img">
                         </div>
                     </div>
 
                     <!-- Fila Medio Inferior -->
                     <div class="hex-item hex-brand" data-brand="bion">
                         <div class="hex-content">
-                            <div class="brand-logo">BION</div>
-                            <div class="brand-subtitle">We improve air</div>
+                            <img src="img/bion.png" alt="BION" class="brand-logo-img">
                         </div>
                     </div>
                     <div class="hex-item hex-brand" data-brand="united">
                         <div class="hex-content">
-                            <div class="brand-logo">United Enertech</div>
+                            <img src="img/united_enertech.png" alt="United Enertech" class="brand-logo-img">
                         </div>
                     </div>
 
                     <!-- Fila Inferior -->
                     <div class="hex-item hex-brand" data-brand="tuttle">
                         <div class="hex-content">
-                            <div class="brand-logo">Tuttle&Bailey</div>
-                            <div class="brand-subtitle">Cleaner Air</div>
+                            <img src="img/tb_tuttle.png" alt="Tuttle&Bailey" class="brand-logo-img">
                         </div>
                     </div>
                     <div class="hex-item hex-brand" data-brand="huayi">
@@ -383,8 +426,8 @@
                 <h2 class="section-title">Contáctanos</h2>
                 <p class="section-subtitle">Estamos aquí para ayudarte con tus proyectos de climatización</p>
             </div>
-            <div class="contact-content">
-                <!-- Información de contacto compacta -->
+            <div class="contact-info-only">
+                <!-- Información de contacto -->
                 <div class="contact-info-compact">
                     <div class="contact-grid">
                         <div class="contact-item">
@@ -417,38 +460,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- Formulario compacto -->
-                <div class="contact-form-compact">
-                    <form class="form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Nombre</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Teléfono</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Empresa</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <span>Enviar Mensaje</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                <!-- CTA para ir a página de contacto -->
+                <div class="contact-cta-section">
+                    <h3>¿Necesitas asesoría personalizada?</h3>
+                    <p>Completa nuestro formulario de contacto y nos pondremos en contacto contigo</p>
+                    <a href="contacto.html" class="cta-button">
+                        <span>Ir a Formulario</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - ASIREP | Recursos Técnicos y Documentación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Accede a nuestra biblioteca de recursos técnicos: catálogos, manuales, especificaciones y documentación de climatización industrial.">
+    <meta name="keywords" content="biblioteca, recursos técnicos, catálogos, manuales, documentación, climatización, ASIREP">
+    <meta name="author" content="ASIREP">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Biblioteca - ASIREP | Recursos Técnicos y Documentación">
+    <meta property="og:description" content="Biblioteca completa de recursos técnicos para climatización industrial">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asirep.cl/biblioteca.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#017bca">
+    <link rel="icon" href="img/Logotipo-Asirep.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="img/Logotipo-Asirep.webp">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="img/Logotipo-Asirep.webp" alt="ASIREP - Climatización Industrial" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>ASIREP</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rubros.html" class="nav-link">
+                            <i class="fas fa-industry"></i>
+                            <span>Rubros</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="marcas.html" class="nav-link">
+                            <i class="fas fa-star"></i>
+                            <span>Nuestras Marcas</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="marcas.html#bard">Bard</a></li>
+                            <li><a href="marcas.html#dataaire">Data Aire</a></li>
+                            <li><a href="marcas.html#bomaksan">Bomaksan</a></li>
+                            <li><a href="marcas.html#sendo">Sendo</a></li>
+                            <li><a href="marcas.html#boaair">BoaAir</a></li>
+                            <li><a href="marcas.html#tuttle">Tuttle & Bailey</a></li>
+                            <li><a href="marcas.html#united">United Enertech</a></li>
+                            <li><a href="marcas.html#huayi">Huayi</a></li>
+                            <li><a href="marcas.html#bion">Bion</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="biblioteca.html" class="nav-link active">
+                            <i class="fas fa-book"></i>
+                            <span>Biblioteca</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link nav-cta">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Biblioteca Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="page-hero-title">Biblioteca Técnica</h1>
+                <p class="page-hero-subtitle">
+                    Accede a nuestra completa biblioteca de recursos técnicos, catálogos, manuales y documentación especializada en climatización industrial
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="biblioteca-search">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar en la biblioteca..." id="searchInput">
+                </div>
+                <div class="search-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="catalogos">Catálogos</button>
+                    <button class="filter-btn" data-filter="manuales">Manuales</button>
+                    <button class="filter-btn" data-filter="especificaciones">Especificaciones</button>
+                    <button class="filter-btn" data-filter="guias">Guías Técnicas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biblioteca Content -->
+    <section class="biblioteca-content">
+        <div class="container">
+            <!-- Catálogos Section -->
+            <div class="biblioteca-section" id="catalogos">
+                <h2 class="section-title gradient-text">Catálogos de Productos</h2>
+                <div class="resources-grid">
+                    <div class="resource-card" data-category="catalogos">
+                        <div class="resource-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Catálogo Bard - Climatización de Precisión</h3>
+                            <p>Línea completa de equipos de climatización de precisión para data centers y aplicaciones críticas.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Catálogo</span>
+                                <span class="resource-size">12.5 MB</span>
+                                <span class="resource-pages">48 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="catalogos">
+                        <div class="resource-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Catálogo DataAire - Centros de Datos</h3>
+                            <p>Soluciones especializadas para centros de datos y salas de computación críticas.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Catálogo</span>
+                                <span class="resource-size">8.2 MB</span>
+                                <span class="resource-pages">32 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="catalogos">
+                        <div class="resource-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Catálogo Bomaksan - Heavy Duty</h3>
+                            <p>Equipos industriales robustos para aplicaciones de alta demanda y ambientes extremos.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Catálogo</span>
+                                <span class="resource-size">15.1 MB</span>
+                                <span class="resource-pages">56 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="catalogos">
+                        <div class="resource-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Catálogo Tuttle & Bailey - Filtración</h3>
+                            <p>Sistemas avanzados de filtración y purificación de aire para aplicaciones críticas.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Catálogo</span>
+                                <span class="resource-size">9.8 MB</span>
+                                <span class="resource-pages">40 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manuales Section -->
+            <div class="biblioteca-section" id="manuales">
+                <h2 class="section-title gradient-text">Manuales Técnicos</h2>
+                <div class="resources-grid">
+                    <div class="resource-card" data-category="manuales">
+                        <div class="resource-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Manual de Instalación - Sistemas de Precisión</h3>
+                            <p>Guía completa para la instalación correcta de sistemas de climatización de precisión.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Manual</span>
+                                <span class="resource-size">6.3 MB</span>
+                                <span class="resource-pages">24 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="manuales">
+                        <div class="resource-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Manual de Mantenimiento Preventivo</h3>
+                            <p>Procedimientos y cronogramas para el mantenimiento óptimo de equipos de climatización.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Manual</span>
+                                <span class="resource-size">4.7 MB</span>
+                                <span class="resource-pages">18 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="manuales">
+                        <div class="resource-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Manual de Troubleshooting</h3>
+                            <p>Diagnóstico y solución de problemas comunes en sistemas de climatización industrial.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Manual</span>
+                                <span class="resource-size">5.2 MB</span>
+                                <span class="resource-pages">28 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especificaciones Section -->
+            <div class="biblioteca-section" id="especificaciones">
+                <h2 class="section-title gradient-text">Especificaciones Técnicas</h2>
+                <div class="resources-grid">
+                    <div class="resource-card" data-category="especificaciones">
+                        <div class="resource-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Especificaciones Data Center - Bard</h3>
+                            <p>Especificaciones técnicas detalladas para equipos de climatización en data centers.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Especificación</span>
+                                <span class="resource-size">2.1 MB</span>
+                                <span class="resource-pages">12 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="especificaciones">
+                        <div class="resource-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Especificaciones de Rendimiento</h3>
+                            <p>Datos de rendimiento, capacidades y eficiencias de todos nuestros equipos.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Especificación</span>
+                                <span class="resource-size">3.4 MB</span>
+                                <span class="resource-pages">16 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guías Técnicas Section -->
+            <div class="biblioteca-section" id="guias">
+                <h2 class="section-title gradient-text">Guías Técnicas</h2>
+                <div class="resources-grid">
+                    <div class="resource-card" data-category="guias">
+                        <div class="resource-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Guía de Cálculo de Cargas Térmicas</h3>
+                            <p>Metodología para el cálculo preciso de cargas térmicas en aplicaciones industriales.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Guía</span>
+                                <span class="resource-size">7.8 MB</span>
+                                <span class="resource-pages">36 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="guias">
+                        <div class="resource-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Guía de Diseño de Sistemas</h3>
+                            <p>Principios y mejores prácticas para el diseño de sistemas de climatización industrial.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Guía</span>
+                                <span class="resource-size">11.2 MB</span>
+                                <span class="resource-pages">52 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card" data-category="guias">
+                        <div class="resource-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Guía de Eficiencia Energética</h3>
+                            <p>Estrategias para optimizar el consumo energético en sistemas de climatización.</p>
+                            <div class="resource-meta">
+                                <span class="resource-type">Guía</span>
+                                <span class="resource-size">6.9 MB</span>
+                                <span class="resource-pages">28 páginas</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Descargar
+                            </button>
+                            <button class="btn-preview">
+                                <i class="fas fa-eye"></i>
+                                Vista Previa
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿No encuentras lo que necesitas?</h2>
+                <p>Contáctanos para solicitar documentación específica o asesoría técnica personalizada</p>
+                <a href="contacto.html" class="cta-button-large">
+                    <span>Solicitar Documentación</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-logo-section">
+                    <img src="img/Logotipo-Asirep.webp" alt="ASIREP" class="footer-logo">
+                    <p>Líderes en climatización industrial con más de 35 años de experiencia entregando soluciones integrales.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#catalogos">Catálogos</a></li>
+                        <li><a href="#manuales">Manuales</a></li>
+                        <li><a href="#especificaciones">Especificaciones</a></li>
+                        <li><a href="#guias">Guías Técnicas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="contacto.html">Asesoría Técnica</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="#maintenance">Mantenimiento</a></li>
+                        <li><a href="#training">Capacitación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +56 222 358 851</li>
+                        <li><i class="fas fa-envelope"></i> asirep@asirep.cl</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Providencia, Santiago</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ASIREP. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

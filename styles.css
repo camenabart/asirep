@@ -878,6 +878,22 @@ body {
     margin-bottom: 2px;
 }
 
+/* Imágenes de logos de marcas */
+.brand-logo-img {
+    max-width: 70px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect para imágenes de logos */
+.hex-brand:hover .brand-logo-img {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+}
+
 .brand-subtitle {
     font-size: 0.6rem;
     color: var(--text-light);
@@ -979,6 +995,11 @@ body {
     
     .brand-logo {
         font-size: 0.7rem;
+    }
+    
+    .brand-logo-img {
+        max-width: 50px;
+        max-height: 35px;
     }
     
     .brand-subtitle {

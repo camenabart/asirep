@@ -93,8 +93,18 @@ body {
 }
 
 /* Estilos específicos para el logo oficial de ASIREP */
+.nav-logo a {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-logo a:hover {
+    transform: scale(1.05);
+}
+
 .nav-logo .logo-img {
     filter: brightness(1.1) contrast(1.1);
+    transition: all 0.3s ease;
 }
 
 .footer-section .logo-img {
@@ -342,34 +352,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(1, 123, 202, 0.85), rgba(5, 152, 255, 0.75)), url('img/Asirep_header_files/server-1235959_1920.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: linear-gradient(135deg, #017bca, #0598ff);
     z-index: -2;
-    animation: gradientShift 6s ease-in-out infinite;
+    overflow: hidden;
 }
 
-@keyframes gradientShift {
-    0%, 100% { 
-        background: linear-gradient(135deg, rgba(1, 123, 202, 0.85), rgba(5, 152, 255, 0.75)), url('img/Asirep_header_files/server-1235959_1920.jpg');
-        filter: brightness(1) contrast(1.1);
-    }
-    50% { 
-        background: linear-gradient(45deg, rgba(5, 152, 255, 0.75), rgba(1, 123, 202, 0.85)), url('img/Asirep_header_files/server-1235959_1920.jpg');
-        filter: brightness(1.1) contrast(1.2);
-    }
-}
-
-.hero-background::before {
-    content: '';
+.hero-video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,122.7C960,139,1056,149,1152,149.3C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-    background-size: cover;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    object-fit: cover;
 }
 
 .hero-overlay {
@@ -380,18 +378,49 @@ body {
     height: 100%;
     background: linear-gradient(
         45deg,
-        rgba(1, 123, 202, 0.2) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        rgba(5, 152, 255, 0.2) 100%
+        rgba(1, 123, 202, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(5, 152, 255, 0.6) 100%
     );
-    backdrop-filter: blur(1px);
-    z-index: -1;
+    z-index: 0;
 }
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 25%),
+        radial-gradient(circle at 60% 20%, rgba(255,255,255,0.06) 0%, transparent 20%),
+        radial-gradient(circle at 30% 80%, rgba(255,255,255,0.05) 0%, transparent 35%);
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-5%, -5%) rotate(90deg); }
+    50% { transform: translate(-10%, 0) rotate(180deg); }
+    75% { transform: translate(-5%, 5%) rotate(270deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+
+
+
+
+
 
 .hero-content {
     text-align: center;
     color: white;
     z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     animation: heroEntrance 1.5s ease-out;
 }
 
@@ -413,22 +442,14 @@ body {
 .hero-title {
     font-size: 3.2rem;
     font-weight: 600;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     letter-spacing: -0.01em;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     line-height: 1.2;
-    background: linear-gradient(45deg, #ffffff, #e0f2fe, #ffffff);
-    background-size: 200% 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 3s ease-in-out infinite;
+    color: white;
 }
 
-@keyframes shimmer {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
+
 
 .hero-description {
     font-size: 1.25rem;
@@ -443,25 +464,23 @@ body {
 .hero-stats {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    align-items: center;
+    gap: 2rem;
     margin-bottom: 3rem;
-    animation: statsFloat 4s ease-in-out infinite;
+    flex-wrap: wrap;
 }
 
-@keyframes statsFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
+
 
 .stat {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
-    animation: statPulse 2s ease-in-out infinite alternate;
+    min-width: 150px;
 }
 
 .stat:hover {
@@ -490,14 +509,7 @@ body {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.stat:nth-child(1) { animation-delay: 0s; }
-.stat:nth-child(2) { animation-delay: 0.5s; }
-.stat:nth-child(3) { animation-delay: 1s; }
 
-@keyframes statPulse {
-    0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
-    100% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.3); }
-}
 
 .stat:hover {
     transform: scale(1.05);
@@ -506,10 +518,9 @@ body {
 
 .stat-number {
     display: block;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .stat-label {
@@ -716,8 +727,11 @@ body {
 
 .industries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .industry-card {
@@ -730,10 +744,11 @@ body {
     border: 2px solid transparent;
     overflow: hidden;
     position: relative;
-    height: 200px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 250px;
 }
 
 .industry-card:hover {
@@ -746,7 +761,12 @@ body {
     position: relative;
     z-index: 2;
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .industry-icon {
@@ -757,10 +777,48 @@ body {
 }
 
 .industry-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    text-align: center;
+    line-height: 1.3;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Responsive para Industries */
+@media (max-width: 1200px) {
+    .industries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .industries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .industry-card {
+        height: 180px;
+        min-width: 200px;
+    }
+    
+    .industry-content {
+        padding: 1rem;
+    }
+    
+    .industry-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .industry-card h3 {
+        font-size: 1.1rem;
+    }
 }
 
 /* Solutions Section - Diseño Intercalado */
@@ -1335,7 +1393,7 @@ body {
     color: white;
     border: none;
     padding: 1.2rem 3rem;
-    border-radius: 0.5rem;
+    border-radius: 50px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
@@ -1541,7 +1599,7 @@ body {
     background: var(--gradient-primary);
     color: white;
     padding: 1.25rem 3rem;
-    border-radius: 0.5rem;
+    border-radius: 50px;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -2022,7 +2080,7 @@ body {
     color: white;
     border: none;
     padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 25px;
     font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
@@ -2337,7 +2395,7 @@ body {
     color: white;
     border: none;
     padding: 1rem 2rem;
-    border-radius: 0.5rem;
+    border-radius: 50px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;

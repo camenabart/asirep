@@ -306,59 +306,71 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title gradient-text">Nuestras Marcas</h2>
-                <p class="section-subtitle">Representamos 9 marcas de fábrica en Chile, cada una del más alto nivel mundial</p>
+                <p class="section-subtitle">Representamos las marcas más prestigiosas del mundo en climatización industrial</p>
             </div>
             
-            <!-- Opción 1: Carrusel de logos -->
-            <div class="brands-carousel">
-                <div class="brands-track">
-                    <div class="brand-logo-item">BARD</div>
-                    <div class="brand-logo-item">DATA AIRE</div>
-                    <div class="brand-logo-item">BOMAKSAN</div>
-                    <div class="brand-logo-item">SENDO</div>
-                    <div class="brand-logo-item">BOAAIR</div>
-                    <div class="brand-logo-item">TUTTLE & BAILEY</div>
-                    <div class="brand-logo-item">UNITED ENERTECH</div>
-                    <div class="brand-logo-item">HUAYI</div>
-                    <div class="brand-logo-item">BION</div>
-                    <!-- Duplicados para animación continua -->
-                    <div class="brand-logo-item">BARD</div>
-                    <div class="brand-logo-item">DATA AIRE</div>
-                    <div class="brand-logo-item">BOMAKSAN</div>
-                </div>
-            </div>
+            <!-- Diseño Hexagonal de Marcas -->
+            <div class="hexagonal-brands">
+                <div class="hex-grid">
+                    <!-- Fila Superior -->
+                    <div class="hex-item hex-brand" data-brand="bard">
+                        <div class="hex-content">
+                            <div class="brand-logo">Bard</div>
+                        </div>
+                    </div>
+                    <div class="hex-item hex-brand" data-brand="dataaire">
+                        <div class="hex-content">
+                            <div class="brand-logo">dataaire</div>
+                        </div>
+                    </div>
 
-            <!-- Opción 2: Grid de logos con hover effects -->
-            <div class="brands-grid-modern">
-                <div class="brand-card-modern">
-                    <div class="brand-icon"><i class="fas fa-wind"></i></div>
-                    <h3>BARD</h3>
-                    <p>Equipos de climatización de precisión</p>
-                </div>
-                <div class="brand-card-modern">
-                    <div class="brand-icon"><i class="fas fa-server"></i></div>
-                    <h3>DATA AIRE</h3>
-                    <p>Soluciones para centros de datos</p>
-                </div>
-                <div class="brand-card-modern">
-                    <div class="brand-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>BOMAKSAN</h3>
-                    <p>Equipos industriales robustos</p>
-                </div>
-                <div class="brand-card-modern">
-                    <div class="brand-icon"><i class="fas fa-temperature-high"></i></div>
-                    <h3>SENDO</h3>
-                    <p>Control de temperatura avanzado</p>
-                </div>
-                <div class="brand-card-modern">
-                    <div class="brand-icon"><i class="fas fa-air-freshener"></i></div>
-                    <h3>BOAAIR</h3>
-                    <p>Purificación de aire</p>
-                </div>
-                <div class="brand-card-modern">
-                    <div class="brand-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>TUTTLE & BAILEY</h3>
-                    <p>Filtros de alta eficiencia</p>
+                    <!-- Fila Medio Superior -->
+                    <div class="hex-item hex-brand" data-brand="boa">
+                        <div class="hex-content">
+                            <div class="brand-logo">BOA AIR</div>
+                        </div>
+                    </div>
+                    <div class="hex-item hex-center">
+                        <div class="hex-content">
+                            <img src="img/Logotipo-Asirep.webp" alt="ASIREP" class="asirep-logo">
+                        </div>
+                    </div>
+                    <div class="hex-item hex-brand" data-brand="bomakean">
+                        <div class="hex-content">
+                            <div class="brand-logo">bomakean</div>
+                        </div>
+                    </div>
+
+                    <!-- Fila Medio Inferior -->
+                    <div class="hex-item hex-brand" data-brand="bion">
+                        <div class="hex-content">
+                            <div class="brand-logo">BION</div>
+                            <div class="brand-subtitle">We improve air</div>
+                        </div>
+                    </div>
+                    <div class="hex-item hex-brand" data-brand="united">
+                        <div class="hex-content">
+                            <div class="brand-logo">United Enertech</div>
+                        </div>
+                    </div>
+
+                    <!-- Fila Inferior -->
+                    <div class="hex-item hex-brand" data-brand="tuttle">
+                        <div class="hex-content">
+                            <div class="brand-logo">Tuttle&Bailey</div>
+                            <div class="brand-subtitle">Cleaner Air</div>
+                        </div>
+                    </div>
+                    <div class="hex-item hex-brand" data-brand="huayi">
+                        <div class="hex-content">
+                            <div class="brand-logo">Huayi Anti Static Floor</div>
+                        </div>
+                    </div>
+                    <div class="hex-item hex-brand" data-brand="sendo">
+                        <div class="hex-content">
+                            <div class="brand-logo">SENDO</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

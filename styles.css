@@ -766,121 +766,228 @@ body {
     line-height: 1.7;
 }
 
-/* Brands Section */
+/* Brands Section - Diseño Hexagonal */
 .brands {
     padding: 6rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
-/* Carrusel de marcas */
-.brands-carousel {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 2rem 0;
-    background: rgba(5, 152, 255, 0.05);
-    border-radius: 1rem;
-    padding: 2rem 0;
-}
-
-.brands-track {
-    display: inline-flex;
-    animation: scroll 20s linear infinite;
-    gap: 3rem;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.brand-logo-item {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: white;
-    border-radius: 10px;
-    font-weight: 600;
-    color: var(--primary-color);
-    box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    min-width: 150px;
-    text-align: center;
-}
-
-.brand-logo-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-/* Grid moderno de marcas */
-.brands-grid-modern {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.brand-card-modern {
-    background: white;
+/* Contenedor principal hexagonal */
+.hexagonal-brands {
+    max-width: 1000px;
+    margin: 3rem auto;
     padding: 2rem;
-    border-radius: 1rem;
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
 }
 
-.brand-card-modern::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(5, 152, 255, 0.1), transparent);
-    transition: left 0.5s ease;
+/* Grid de hexágonos */
+.hex-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.brand-card-modern:hover::before {
-    left: 100%;
-}
-
-.brand-card-modern:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-light);
-    box-shadow: 0 20px 40px rgba(1, 123, 202, 0.2);
-}
-
-.brand-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
+/* Elementos hexagonales base */
+.hex-item {
+    width: 120px;
+    height: 120px;
+    background: white;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
-    font-size: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 25px rgba(1, 123, 202, 0.15);
+    position: relative;
+    cursor: pointer;
+}
+
+/* Posicionamiento específico de hexágonos */
+.hex-grid .hex-item:nth-child(1) { grid-column: 2; grid-row: 1; } /* Bard */
+.hex-grid .hex-item:nth-child(2) { grid-column: 4; grid-row: 1; } /* Dataaire */
+.hex-grid .hex-item:nth-child(3) { grid-column: 1; grid-row: 2; } /* BOA */
+.hex-grid .hex-item:nth-child(4) { grid-column: 3; grid-row: 2; } /* ASIREP Centro */
+.hex-grid .hex-item:nth-child(5) { grid-column: 5; grid-row: 2; } /* Bomakean */
+.hex-grid .hex-item:nth-child(6) { grid-column: 2; grid-row: 3; } /* Bion */
+.hex-grid .hex-item:nth-child(7) { grid-column: 4; grid-row: 3; } /* United */
+.hex-grid .hex-item:nth-child(8) { grid-column: 1; grid-row: 4; } /* Tuttle */
+.hex-grid .hex-item:nth-child(9) { grid-column: 3; grid-row: 4; } /* Huayi */
+.hex-grid .hex-item:nth-child(10) { grid-column: 5; grid-row: 4; } /* Sendo */
+
+/* Hexágono central (ASIREP) */
+.hex-center {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    box-shadow: 0 15px 35px rgba(1, 123, 202, 0.3);
+    z-index: 10;
+}
+
+.hex-center:hover {
+    transform: scale(1.1) rotateZ(5deg);
+    box-shadow: 0 20px 40px rgba(1, 123, 202, 0.4);
+}
+
+/* Hexágonos de marcas */
+.hex-brand {
+    background: linear-gradient(135deg, white 0%, #f8fafc 100%);
+    border: 3px solid rgba(5, 152, 255, 0.1);
+}
+
+.hex-brand:hover {
+    transform: scale(1.15) rotateZ(-3deg);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    box-shadow: 0 15px 35px rgba(1, 123, 202, 0.3);
+}
+
+.hex-brand:hover .hex-content {
     color: white;
+}
+
+/* Contenido de hexágonos */
+.hex-content {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     transition: all 0.3s ease;
 }
 
-.brand-card-modern:hover .brand-icon {
-    transform: scale(1.1) rotateY(360deg);
+/* Logo ASIREP central */
+.asirep-logo {
+    width: 80px;
+    height: auto;
+    filter: brightness(0) invert(1);
 }
 
-.brand-card-modern h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
+/* Logos de marcas */
+.brand-logo {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    margin-bottom: 2px;
 }
 
-.brand-card-modern p {
+.brand-subtitle {
+    font-size: 0.6rem;
     color: var(--text-light);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+/* Efectos especiales para marcas específicas */
+.hex-brand[data-brand="bard"] .brand-logo {
+    color: #dc2626;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.hex-brand[data-brand="dataaire"] .brand-logo {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.hex-brand[data-brand="boa"] .brand-logo {
+    color: #1e40af;
+    font-weight: 700;
+}
+
+.hex-brand[data-brand="bomakean"] .brand-logo {
+    color: #dc2626;
+    font-weight: 800;
+}
+
+.hex-brand[data-brand="bion"] .brand-logo {
+    color: #059669;
+    font-weight: 700;
+}
+
+.hex-brand[data-brand="united"] .brand-logo {
+    color: #059669;
+    font-weight: 600;
+}
+
+.hex-brand[data-brand="tuttle"] .brand-logo {
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.hex-brand[data-brand="huayi"] .brand-logo {
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.hex-brand[data-brand="sendo"] .brand-logo {
+    color: #1e40af;
+    font-weight: 800;
+}
+
+/* Animación sutil de entrada */
+@keyframes hexFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.hex-item {
+    animation: hexFloat 6s ease-in-out infinite;
+}
+
+.hex-item:nth-child(even) {
+    animation-delay: -3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hex-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 80px);
+        gap: 8px;
+        transform: scale(0.8);
+    }
+    
+    .hex-item {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .hex-center {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .hex-grid .hex-item:nth-child(1) { grid-column: 2; grid-row: 1; }
+    .hex-grid .hex-item:nth-child(2) { grid-column: 3; grid-row: 2; }
+    .hex-grid .hex-item:nth-child(3) { grid-column: 1; grid-row: 2; }
+    .hex-grid .hex-item:nth-child(4) { grid-column: 2; grid-row: 3; }
+    .hex-grid .hex-item:nth-child(5) { grid-column: 3; grid-row: 4; }
+    .hex-grid .hex-item:nth-child(6) { grid-column: 1; grid-row: 4; }
+    .hex-grid .hex-item:nth-child(7) { grid-column: 2; grid-row: 5; }
+    .hex-grid .hex-item:nth-child(8) { grid-column: 1; grid-row: 6; }
+    .hex-grid .hex-item:nth-child(9) { grid-column: 2; grid-row: 6; }
+    .hex-grid .hex-item:nth-child(10) { grid-column: 3; grid-row: 6; }
+    
+    .brand-logo {
+        font-size: 0.7rem;
+    }
+    
+    .brand-subtitle {
+        font-size: 0.5rem;
+    }
+    
+    .asirep-logo {
+        width: 60px;
+    }
 }
 
 /* Contact Section */

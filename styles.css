@@ -1111,7 +1111,7 @@ body.scrolled-past-hero .hero-background {
 
 /* Texto de la sección de marcas */
 .brands .section-header {
-    text-align: center;
+    text-align: left;
     padding-right: 0.5rem;
     order: 1;
 }
@@ -1818,7 +1818,7 @@ body.scrolled-past-hero .hero-background {
 
 /* Texto de la sección de marcas en página dedicada */
 .marcas-hexagonal .section-header {
-    text-align: center;
+    text-align: left;
     padding-right: 0.5rem;
     order: 1;
 }

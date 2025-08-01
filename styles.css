@@ -621,7 +621,7 @@ body.scrolled-past-hero .hero-background {
 
 .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -970,7 +970,7 @@ body.scrolled-past-hero .hero-background {
 /* Título de solución */
 .solution-title {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1.5rem;
     color: var(--text-dark);
     line-height: 1.2;
@@ -1115,6 +1115,7 @@ body.scrolled-past-hero .hero-background {
 
 .brands .section-title {
     font-size: 3rem;
+    font-weight: 600;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -1588,7 +1589,7 @@ body.scrolled-past-hero .hero-background {
 
 .page-hero-title {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
     animation: slideInUp 0.8s ease-out;
 }
@@ -1662,7 +1663,7 @@ body.scrolled-past-hero .hero-background {
 
 .rubro-title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
     color: var(--text-dark);
 }
@@ -1721,7 +1722,7 @@ body.scrolled-past-hero .hero-background {
 
 .cta-content h2 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -1819,6 +1820,7 @@ body.scrolled-past-hero .hero-background {
 
 .marcas-hexagonal .section-title {
     font-size: 3rem;
+    font-weight: 600;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }

@@ -1111,7 +1111,7 @@ body.scrolled-past-hero .hero-background {
 
 /* Texto de la sección de marcas */
 .brands .section-header {
-    text-align: left;
+    text-align: center;
     padding-right: 0.5rem;
     order: 1;
 }
@@ -1133,7 +1133,7 @@ body.scrolled-past-hero .hero-background {
 /* Contenedor principal hexagonal */
 .hexagonal-brands {
     max-width: 600px;
-    margin: 0;
+    margin: 0 4rem 0 0;
     padding: 1rem;
     order: 2;
 }
@@ -1818,7 +1818,7 @@ body.scrolled-past-hero .hero-background {
 
 /* Texto de la sección de marcas en página dedicada */
 .marcas-hexagonal .section-header {
-    text-align: left;
+    text-align: center;
     padding-right: 0.5rem;
     order: 1;
 }
@@ -1839,6 +1839,7 @@ body.scrolled-past-hero .hero-background {
 
 .marcas-hexagonal .hexagonal-brands {
     order: 2;
+    margin: 0 4rem 0 0;
 }
 
 /* Responsive para la página de marcas */

@@ -626,7 +626,7 @@ body.scrolled-past-hero .hero-background {
 }
 
 .section-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
@@ -758,13 +758,28 @@ body.scrolled-past-hero .hero-background {
     padding: 6rem 0;
 }
 
+.industries .container {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+}
+
+.industries .section-header {
+    text-align: right;
+    order: 2;
+    padding-left: 2rem;
+}
+
 .industries-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 0;
+    order: 1;
 }
 
 /* Posicionamiento específico para cada elemento */
@@ -830,11 +845,31 @@ body.scrolled-past-hero .hero-background {
 }
 
 /* Responsive para Industries */
+@media (max-width: 1024px) {
+    .industries .container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .industries .section-header {
+        text-align: center;
+        order: unset;
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .industries-grid {
+        order: unset;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 1200px) {
     .industries-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
-        max-width: 900px;
+        max-width: 700px;
     }
     
     /* Mantener el diseño 3x2 */
@@ -847,6 +882,10 @@ body.scrolled-past-hero .hero-background {
 }
 
 @media (max-width: 768px) {
+    .industries .container {
+        gap: 2rem;
+    }
+    
     .industries-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -1112,7 +1151,7 @@ body.scrolled-past-hero .hero-background {
 /* Texto de la sección de marcas */
 .brands .section-header {
     text-align: left;
-    padding-right: 0.5rem;
+    padding-right: 0;
     order: 1;
 }
 
@@ -1124,10 +1163,13 @@ body.scrolled-past-hero .hero-background {
 }
 
 .brands .section-subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
 }
 
 /* Contenedor principal hexagonal */
@@ -1599,7 +1641,7 @@ body.scrolled-past-hero .hero-background {
 }
 
 .page-hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -1819,7 +1861,7 @@ body.scrolled-past-hero .hero-background {
 /* Texto de la sección de marcas en página dedicada */
 .marcas-hexagonal .section-header {
     text-align: left;
-    padding-right: 0.5rem;
+    padding-right: 0;
     order: 1;
 }
 
@@ -1831,10 +1873,13 @@ body.scrolled-past-hero .hero-background {
 }
 
 .marcas-hexagonal .section-subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
 }
 
 .marcas-hexagonal .hexagonal-brands {

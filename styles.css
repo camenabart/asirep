@@ -1031,11 +1031,8 @@ body.scrolled-past-hero .hero-background {
 /* Lado de imagen */
 .solution-image-side {
     position: relative;
-    border-radius: 1rem;
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
     height: 350px;
-    background: var(--gradient-primary);
 }
 
 .solution-img {
@@ -1116,6 +1113,8 @@ body.scrolled-past-hero .hero-background {
     gap: 1rem;
     align-items: center;
     max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* Responsive para la sección de marcas */
@@ -1866,6 +1865,8 @@ body.scrolled-past-hero .hero-background {
     gap: 1rem;
     align-items: center;
     max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* Texto de la sección de marcas en página dedicada */

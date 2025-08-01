@@ -175,8 +175,6 @@ main,
 
 .nav-link:hover {
     color: var(--primary-light);
-    background: rgba(5, 152, 255, 0.1);
-    transform: translateY(-2px);
 }
 
 /* Icons hidden - hover i styles removed */
@@ -1113,7 +1111,7 @@ body.scrolled-past-hero .hero-background {
 
 /* Texto de la sección de marcas */
 .brands .section-header {
-    text-align: right;
+    text-align: center;
     padding-left: 2rem;
     order: 2;
 }
@@ -1820,7 +1818,7 @@ body.scrolled-past-hero .hero-background {
 
 /* Texto de la sección de marcas en página dedicada */
 .marcas-hexagonal .section-header {
-    text-align: right;
+    text-align: center;
     padding-left: 2rem;
     order: 2;
 }

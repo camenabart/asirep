@@ -68,6 +68,7 @@ function initSmoothScrolling() {
 // Header Scroll Effect
 function initHeaderScroll() {
     const header = document.querySelector('.header');
+    const heroSection = document.querySelector('.hero');
     let lastScrollTop = 0;
     
     window.addEventListener('scroll', function() {
@@ -79,6 +80,18 @@ function initHeaderScroll() {
             header.classList.remove('scrolled');
         }
         
+        // Control hero video visibility
+        if (heroSection) {
+            const heroHeight = heroSection.offsetHeight;
+            const pastHero = scrollTop > heroHeight - 100; // Ocultar cuando se pase el hero
+            
+            if (pastHero) {
+                document.body.classList.add('scrolled-past-hero');
+            } else {
+                document.body.classList.remove('scrolled-past-hero');
+            }
+        }
+        
         // Hide/show header on scroll
         if (scrollTop > lastScrollTop && scrollTop > 200) {
             header.style.transform = 'translateY(-100%)';
@@ -88,6 +101,8 @@ function initHeaderScroll() {
         
         lastScrollTop = scrollTop;
     });
+    
+    // Initialize: No need to add class since video is visible by default
 }
 
 // Scroll Animations

@@ -41,6 +41,14 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+    padding-top: 0; /* Reset cualquier padding previo */
+}
+
+/* Asegurar que el contenido principal no se oculte bajo el header fijo */
+main, 
+.site-main,
+#main {
+    margin-top: 0;
 }
 
 .container {
@@ -344,45 +352,74 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding-top: 120px; /* Compensar altura del header */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px; /* Reducir en mobile */
+    }
+    
+    .page-hero {
+        padding: 8rem 0 3rem; /* Ajustar padding en mobile */
+    }
 }
 
 .hero-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(135deg, #017bca, #0598ff);
-    z-index: -2;
+    z-index: -15;
     overflow: hidden;
+    opacity: 1;
 }
 
 .hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
     width: auto;
     height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: -1;
+    z-index: -10;
     object-fit: cover;
+    opacity: 1;
+    display: block; /* Asegurar que sea visible */
+}
+
+/* Control de visibilidad del video - Visible por defecto */
+.hero-video,
+.hero-overlay,
+.hero-background {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Ocultar el video cuando se haga scroll fuera de la sección hero */
+body.scrolled-past-hero .hero-video,
+body.scrolled-past-hero .hero-overlay,
+body.scrolled-past-hero .hero-background {
+    opacity: 0;
 }
 
 .hero-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(
         45deg,
         rgba(1, 123, 202, 0.6) 0%,
         rgba(0, 0, 0, 0.4) 50%,
         rgba(5, 152, 255, 0.6) 100%
     );
-    z-index: 0;
+    z-index: -5;
+    pointer-events: none; /* Permite interactuar con elementos encima */
 }
 
 .hero-background::before {
@@ -727,12 +764,20 @@ body {
 
 .industries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     justify-content: center;
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
 }
+
+/* Posicionamiento específico para cada elemento */
+.industries-grid .industry-card:nth-child(1) { grid-column: 1; grid-row: 1; }
+.industries-grid .industry-card:nth-child(2) { grid-column: 2; grid-row: 1; }
+.industries-grid .industry-card:nth-child(3) { grid-column: 3; grid-row: 1; }
+.industries-grid .industry-card:nth-child(4) { grid-column: 1; grid-row: 2; }
+.industries-grid .industry-card:nth-child(5) { grid-column: 2; grid-row: 2; }
+.industries-grid .industry-card:nth-child(6) { grid-column: 3; grid-row: 2; }
 
 .industry-card {
     background: white;
@@ -791,16 +836,34 @@ body {
 /* Responsive para Industries */
 @media (max-width: 1200px) {
     .industries-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
+        max-width: 900px;
     }
+    
+    /* Mantener el diseño 3x2 */
+    .industries-grid .industry-card:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .industries-grid .industry-card:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .industries-grid .industry-card:nth-child(3) { grid-column: 3; grid-row: 1; }
+    .industries-grid .industry-card:nth-child(4) { grid-column: 1; grid-row: 2; }
+    .industries-grid .industry-card:nth-child(5) { grid-column: 2; grid-row: 2; }
+    .industries-grid .industry-card:nth-child(6) { grid-column: 3; grid-row: 2; }
 }
 
 @media (max-width: 768px) {
     .industries-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        max-width: 500px;
     }
+    
+    /* Diseño 2x3 para tablets */
+    .industries-grid .industry-card:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .industries-grid .industry-card:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .industries-grid .industry-card:nth-child(3) { grid-column: 1; grid-row: 2; }
+    .industries-grid .industry-card:nth-child(4) { grid-column: 2; grid-row: 2; }
+    .industries-grid .industry-card:nth-child(5) { grid-column: 1; grid-row: 3; }
+    .industries-grid .industry-card:nth-child(6) { grid-column: 2; grid-row: 3; }
     
     .industry-card {
         height: 180px;
@@ -819,6 +882,21 @@ body {
     .industry-card h3 {
         font-size: 1.1rem;
     }
+}
+
+@media (max-width: 480px) {
+    .industries-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+    
+    /* Diseño vertical para móviles */
+    .industries-grid .industry-card:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .industries-grid .industry-card:nth-child(2) { grid-column: 1; grid-row: 2; }
+    .industries-grid .industry-card:nth-child(3) { grid-column: 1; grid-row: 3; }
+    .industries-grid .industry-card:nth-child(4) { grid-column: 1; grid-row: 4; }
+    .industries-grid .industry-card:nth-child(5) { grid-column: 1; grid-row: 5; }
+    .industries-grid .industry-card:nth-child(6) { grid-column: 1; grid-row: 6; }
 }
 
 /* Solutions Section - Diseño Intercalado */
@@ -987,29 +1065,90 @@ body {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
+.brands .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+}
+
+/* Responsive para la sección de marcas */
+@media (max-width: 1024px) {
+    .brands .container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .brands .section-header {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .hexagonal-brands {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .hex-grid {
+        max-width: 600px;
+    }
+    
+    .hex-item {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hex-center {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Texto de la sección de marcas */
+.brands .section-header {
+    text-align: left;
+    padding-right: 2rem;
+}
+
+.brands .section-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.brands .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
 /* Contenedor principal hexagonal */
 .hexagonal-brands {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 2rem;
+    max-width: 600px;
+    margin: 0;
+    padding: 1rem;
 }
 
 /* Grid de hexágonos */
 .hex-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 100px);
-    gap: 10px;
+    grid-template-rows: repeat(4, 80px);
+    gap: 8px;
     justify-items: center;
     align-items: center;
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
 /* Elementos hexagonales base */
 .hex-item {
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     background: white;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
@@ -1035,8 +1174,8 @@ body {
 
 /* Hexágono central (ASIREP) */
 .hex-center {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     box-shadow: 0 15px 35px rgba(1, 123, 202, 0.3);
     z-index: 10;
@@ -1442,7 +1581,7 @@ body {
 /* Page Hero Styles (Rubros, Marcas, Biblioteca) */
 .page-hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem;
     text-align: center;
     color: white;
 }
@@ -1662,6 +1801,48 @@ body {
 .marcas-hexagonal {
     padding: 6rem 0;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.marcas-hexagonal .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+}
+
+/* Texto de la sección de marcas en página dedicada */
+.marcas-hexagonal .section-header {
+    text-align: left;
+    padding-right: 2rem;
+}
+
+.marcas-hexagonal .section-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.marcas-hexagonal .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Responsive para la página de marcas */
+@media (max-width: 1024px) {
+    .marcas-hexagonal .container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .marcas-hexagonal .section-header {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
 }
 
 .marcas-details {

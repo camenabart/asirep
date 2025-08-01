@@ -635,7 +635,7 @@ body.scrolled-past-hero .hero-background {
 
 /* Services Section */
 .services {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: var(--gray-50);
 }
 
@@ -755,29 +755,39 @@ body.scrolled-past-hero .hero-background {
 
 /* Industries Section */
 .industries {
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .industries .container {
     display: grid;
     grid-template-columns: 1fr 0.6fr;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .industries .section-header {
-    text-align: right;
+    text-align: center;
     order: 2;
-    padding-left: 2rem;
+    padding: 0 2rem;
+}
+
+.industries .section-title {
+    font-size: 2rem;
+}
+
+.industries .section-subtitle {
+    font-size: 0.9rem;
 }
 
 .industries-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
-    max-width: 800px;
+    max-width: 650px;
     margin: 0;
     order: 1;
 }
@@ -800,11 +810,11 @@ body.scrolled-past-hero .hero-background {
     border: 2px solid transparent;
     overflow: hidden;
     position: relative;
-    height: 220px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 250px;
+    min-width: 200px;
 }
 
 .industry-card:hover {
@@ -869,7 +879,7 @@ body.scrolled-past-hero .hero-background {
     .industries-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
-        max-width: 700px;
+        max-width: 600px;
     }
     
     /* Mantener el diseño 3x2 */
@@ -936,7 +946,7 @@ body.scrolled-past-hero .hero-background {
 
 /* Solutions Section - Diseño Intercalado */
 .solutions {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: var(--gray-50);
 }
 
